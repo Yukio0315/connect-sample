@@ -1,0 +1,10 @@
+{
+    "version": "0.2",
+    "ignorePaths": [".devcontainer", "gen", "editorconfig"],
+    "dictionaryDefinitions": [],
+    "dictionaries": ["go"],
+    "words": [],
+    "ignoreWords": ["devcontainer"],
+    "import": [],
+    "ignoreRegExpList": ["^import \\(\n(.*\n)*\\)$", "[0-9a-zA-Z]*v1"]
+}
