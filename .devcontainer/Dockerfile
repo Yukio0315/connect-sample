@@ -1,5 +1,6 @@
 FROM golang:1.20-bullseye
 
+
 RUN go install github.com/bufbuild/buf/cmd/buf@latest
 RUN go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
@@ -12,3 +13,5 @@ RUN go install github.com/haya14busa/goplay/cmd/goplay@latest
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
 RUN go install honnef.co/go/tools/cmd/staticcheck@latest
 RUN go install golang.org/x/tools/gopls@latest
+
+ADD .zshrc $HOME
