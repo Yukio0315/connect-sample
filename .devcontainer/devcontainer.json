@@ -35,11 +35,14 @@
 				"zxh404.vscode-proto3",
 				"bufbuild.vscode-buf",
 				"shardulm94.trailing-spaces",
-				"emeraldwalk.RunOnSave"
+				"emeraldwalk.RunOnSave",
+				"bungcip.better-toml"
 			]
 		}
-	}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	"postStartCommand": "air -c .air.toml"
 }
