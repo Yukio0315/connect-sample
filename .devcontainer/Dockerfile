@@ -14,9 +14,8 @@ RUN go install honnef.co/go/tools/cmd/staticcheck@latest
 RUN go install golang.org/x/tools/gopls@latest
 RUN go install github.com/cosmtrek/air@latest
 
-ADD .zshrc $HOME
-
 # change default shell to zsh
+ADD .zshrc $HOME
 RUN echo "if [ -t 1 ]; then" >> /root/.bashrc
 RUN echo "exec zsh" >> /root/.bashrc
 RUN echo "fi" >> /root/.bashrc
