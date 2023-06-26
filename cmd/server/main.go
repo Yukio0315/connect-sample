@@ -20,6 +20,9 @@ func (s *GreetServer) Greet(
 	ctx context.Context,
 	req *connect.Request[greetv1.GreetRequest],
 ) (*connect.Response[greetv1.GreetResponse], error) {
+	if err := req.Msg.Validate(); err != nil {
+		return nil, err
+	}
 	log.Println("Request headers: ", req.Header())
 	res := connect.NewResponse(&greetv1.GreetResponse{
 		Greeting: fmt.Sprintf("Hello, %s!", req.Msg.Name),

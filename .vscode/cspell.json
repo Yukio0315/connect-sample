@@ -1,10 +1,12 @@
 {
     "version": "0.2",
-    "ignorePaths": [".devcontainer", "gen", "editorconfig"],
+    "ignorePaths": [".devcontainer", "gen", "editorconfig", "buf.yaml", "buf.gen.yaml", "buf.lock"],
     "dictionaryDefinitions": [],
     "dictionaries": ["go"],
     "words": [],
-    "ignoreWords": ["devcontainer"],
+    "ignoreWords": [
+        "devcontainer"
+    ],
     "import": [],
     "ignoreRegExpList": ["^import \\(\n(.*\n)*\\)$", "[0-9a-zA-Z]*v1"]
 }
